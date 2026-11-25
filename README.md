@@ -13,11 +13,11 @@ Aplicação web de controle financeiro pessoal, com interface **dark**, responsi
 ## Arquitetura inicial
 
 - **Frontend:** React + TypeScript + Tailwind CSS, como PWA.
-- **Backend:** Google Apps Script.
+- **Backend:** Google Apps Script (runtime V8).
 - **Persistência inicial:** Google Sheets.
 - **Versionamento:** GitHub.
 
-A comunicação entre o frontend hospedado e o Apps Script será validada antes da escolha definitiva do mecanismo de autenticação e transporte. Não utilizar `mode: "no-cors"` como solução de API, pois isso impede a leitura normal da resposta pelo navegador.
+A comunicação entre o frontend hospedado e o Apps Script será validada antes da escolha definitiva do mecanismo de autenticação e transporte. Não utilizar `mode: "no-cors"` como solução de API.
 
 ## Documentação
 
@@ -25,12 +25,12 @@ A comunicação entre o frontend hospedado e o Apps Script será validada antes 
 - [Modelo de dados](docs/DATA_MODEL.md)
 - [Regras financeiras](docs/FINANCIAL_RULES.md)
 - [Roadmap](docs/ROADMAP.md)
-- [Configuração do backend](apps-script/README.md)
+- [Configuração e estado do backend](apps-script/README.md)
 - [Configuração do frontend](frontend/README.md)
 
 ## Situação
 
-Fase 0 — arquitetura e especificação. Nenhuma planilha, credencial ou serviço externo foi criado ou conectado ainda.
+**Fase 1 — fundação do backend:** estrutura de dados, inicialização das 16 abas, persistência básica, cadastro inicial de contas/cartões, cálculo de ciclos de fatura e testes puros das regras de competência/parcelamento já estão versionados. A planilha e a implantação ainda precisam ser configuradas pelo proprietário.
 
 ## Princípios do projeto
 
